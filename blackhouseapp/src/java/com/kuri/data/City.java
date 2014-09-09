@@ -45,7 +45,11 @@ public class City implements Serializable {
     private String name;
     @JoinColumn(name = "provinceID", referencedColumnName = "provinceID")
     @ManyToOne(optional = false)
+<<<<<<< HEAD
     private Province province;
+=======
+    private Province provinceID;
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
 
     public City() {
     }
@@ -75,6 +79,7 @@ public class City implements Serializable {
         this.name = name;
     }
 
+<<<<<<< HEAD
     public Province getProvince() {
         return province;
     }
@@ -85,6 +90,16 @@ public class City implements Serializable {
 
 
 
+=======
+    public Province getProvinceID() {
+        return provinceID;
+    }
+
+    public void setProvinceID(Province provinceID) {
+        this.provinceID = provinceID;
+    }
+
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     @Override
     public int hashCode() {
         int hash = 0;

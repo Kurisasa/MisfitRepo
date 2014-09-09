@@ -56,7 +56,11 @@ public class Consultant implements Serializable {
     @Size(max = 15)
     @Column(name = "consultantTel")
     private String consultantTel;
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "consultant")
+=======
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "consultantID")
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     private List<Consultantorganisation> consultantorganisationList;
 
     public Consultant() {

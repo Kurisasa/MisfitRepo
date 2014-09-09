@@ -59,6 +59,7 @@ public class Organisation implements Serializable {
     private Double latitude;
     @Column(name = "longitude")
     private Double longitude;
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisation")
     private List<Equipmentmanager> equipmentmanagerList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisation")
@@ -66,6 +67,15 @@ public class Organisation implements Serializable {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisation")
     private List<Consultantorganisation> consultantorganisationList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisation")
+=======
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisationID")
+    private List<Equipmentmanager> equipmentmanagerList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisationID")
+    private List<Equipment> equipmentList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisationID")
+    private List<Consultantorganisation> consultantorganisationList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "organisationID")
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     private List<User> userList;
 
     public Organisation() {

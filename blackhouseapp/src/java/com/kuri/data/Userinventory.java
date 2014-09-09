@@ -40,7 +40,11 @@ public class Userinventory implements Serializable {
     private Inventory inventoryID;
     @JoinColumn(name = "userID", referencedColumnName = "userID")
     @ManyToOne(optional = false)
+<<<<<<< HEAD
     private User user;
+=======
+    private User userID;
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
 
     public Userinventory() {
     }
@@ -65,6 +69,7 @@ public class Userinventory implements Serializable {
         this.inventoryID = inventoryID;
     }
 
+<<<<<<< HEAD
     public User getUser() {
         return user;
     }
@@ -75,6 +80,16 @@ public class Userinventory implements Serializable {
 
   
 
+=======
+    public User getUserID() {
+        return userID;
+    }
+
+    public void setUserID(User userID) {
+        this.userID = userID;
+    }
+
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     @Override
     public int hashCode() {
         int hash = 0;

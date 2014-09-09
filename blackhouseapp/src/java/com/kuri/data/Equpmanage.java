@@ -40,7 +40,11 @@ public class Equpmanage implements Serializable {
     private Equipment equipmentID;
     @JoinColumn(name = "equipmentmanagerID", referencedColumnName = "equipmentManagerID")
     @ManyToOne(optional = false)
+<<<<<<< HEAD
     private Equipmentmanager equipmentmanager;
+=======
+    private Equipmentmanager equipmentmanagerID;
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
 
     public Equpmanage() {
     }
@@ -65,6 +69,7 @@ public class Equpmanage implements Serializable {
         this.equipmentID = equipmentID;
     }
 
+<<<<<<< HEAD
     public Equipmentmanager getEquipmentmanager() {
         return equipmentmanager;
     }
@@ -74,6 +79,16 @@ public class Equpmanage implements Serializable {
     }
 
 
+=======
+    public Equipmentmanager getEquipmentmanagerID() {
+        return equipmentmanagerID;
+    }
+
+    public void setEquipmentmanagerID(Equipmentmanager equipmentmanagerID) {
+        this.equipmentmanagerID = equipmentmanagerID;
+    }
+
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     @Override
     public int hashCode() {
         int hash = 0;

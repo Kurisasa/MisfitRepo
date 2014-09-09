@@ -57,7 +57,11 @@ public class Inventory implements Serializable {
     @JoinColumn(name = "equipmentID", referencedColumnName = "equipmentID")
     @ManyToOne(optional = false)
     private Equipment equipmentID;
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "inventory")
+=======
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "inventoryID")
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     private List<Userinventory> userinventoryList;
 
     public Inventory() {

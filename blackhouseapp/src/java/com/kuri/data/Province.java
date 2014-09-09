@@ -44,7 +44,11 @@ public class Province implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "name")
     private String name;
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "province")
+=======
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "provinceID")
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     private List<City> cityList;
 
     public Province() {

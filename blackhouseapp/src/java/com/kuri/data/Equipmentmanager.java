@@ -63,11 +63,19 @@ public class Equipmentmanager implements Serializable {
     @Size(max = 65535)
     @Column(name = "equipmentManagerAddress")
     private String equipmentManagerAddress;
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipmentmanager")
     private List<Equpmanage> equpmanageList;
     @JoinColumn(name = "organisationID", referencedColumnName = "organisationID")
     @ManyToOne(optional = false)
     private Organisation organisation;
+=======
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipmentmanagerID")
+    private List<Equpmanage> equpmanageList;
+    @JoinColumn(name = "organisationID", referencedColumnName = "organisationID")
+    @ManyToOne(optional = false)
+    private Organisation organisationID;
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
 
     public Equipmentmanager() {
     }
@@ -137,6 +145,7 @@ public class Equipmentmanager implements Serializable {
         this.equpmanageList = equpmanageList;
     }
 
+<<<<<<< HEAD
     public Organisation getOrganisation() {
         return organisation;
     }
@@ -147,6 +156,16 @@ public class Equipmentmanager implements Serializable {
 
   
 
+=======
+    public Organisation getOrganisationID() {
+        return organisationID;
+    }
+
+    public void setOrganisationID(Organisation organisationID) {
+        this.organisationID = organisationID;
+    }
+
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     @Override
     public int hashCode() {
         int hash = 0;

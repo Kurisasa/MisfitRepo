@@ -46,12 +46,21 @@ public class Equipment implements Serializable {
     @Size(min = 1, max = 255)
     @Column(name = "equipmentName")
     private String equipmentName;
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipment")
     private List<Equpmanage> equpmanageList;
     @JoinColumn(name = "organisationID", referencedColumnName = "organisation")
     @ManyToOne(optional = false)
     private Organisation organisationID;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipment")
+=======
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipmentID")
+    private List<Equpmanage> equpmanageList;
+    @JoinColumn(name = "organisationID", referencedColumnName = "organisationID")
+    @ManyToOne(optional = false)
+    private Organisation organisationID;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipmentID")
+>>>>>>> 76cec44c301978a92060d65583aadf88d51df71b
     private List<Inventory> inventoryList;
 
     public Equipment() {
