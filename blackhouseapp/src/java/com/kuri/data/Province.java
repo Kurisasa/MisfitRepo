@@ -44,7 +44,7 @@ public class Province implements Serializable {
     @Size(min = 1, max = 50)
     @Column(name = "name")
     private String name;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "provinceID")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "province")
     private List<City> cityList;
 
     public Province() {

@@ -64,7 +64,7 @@ public class User implements Serializable {
     @JoinColumn(name = "organisationID", referencedColumnName = "organisationID")
     @ManyToOne(optional = false)
     private Organisation organisationID;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userID")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Userinventory> userinventoryList;
 
     public User() {

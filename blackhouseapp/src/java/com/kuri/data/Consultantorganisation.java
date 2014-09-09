@@ -40,7 +40,7 @@ public class Consultantorganisation implements Serializable {
     private Consultant consultantID;
     @JoinColumn(name = "organisationID", referencedColumnName = "organisationID")
     @ManyToOne(optional = false)
-    private Organisation organisationID;
+    private Organisation organisation;
 
     public Consultantorganisation() {
     }
@@ -65,13 +65,14 @@ public class Consultantorganisation implements Serializable {
         this.consultantID = consultantID;
     }
 
-    public Organisation getOrganisationID() {
-        return organisationID;
+    public Organisation getOrganisation() {
+        return organisation;
     }
 
-    public void setOrganisationID(Organisation organisationID) {
-        this.organisationID = organisationID;
+    public void setOrganisation(Organisation organisation) {
+        this.organisation = organisation;
     }
+
 
     @Override
     public int hashCode() {

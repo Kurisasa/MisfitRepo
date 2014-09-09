@@ -40,7 +40,7 @@ public class Equpmanage implements Serializable {
     private Equipment equipmentID;
     @JoinColumn(name = "equipmentmanagerID", referencedColumnName = "equipmentManagerID")
     @ManyToOne(optional = false)
-    private Equipmentmanager equipmentmanagerID;
+    private Equipmentmanager equipmentmanager;
 
     public Equpmanage() {
     }
@@ -65,13 +65,14 @@ public class Equpmanage implements Serializable {
         this.equipmentID = equipmentID;
     }
 
-    public Equipmentmanager getEquipmentmanagerID() {
-        return equipmentmanagerID;
+    public Equipmentmanager getEquipmentmanager() {
+        return equipmentmanager;
     }
 
-    public void setEquipmentmanagerID(Equipmentmanager equipmentmanagerID) {
-        this.equipmentmanagerID = equipmentmanagerID;
+    public void setEquipmentmanager(Equipmentmanager equipmentmanager) {
+        this.equipmentmanager = equipmentmanager;
     }
+
 
     @Override
     public int hashCode() {

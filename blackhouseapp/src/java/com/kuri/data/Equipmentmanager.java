@@ -63,11 +63,11 @@ public class Equipmentmanager implements Serializable {
     @Size(max = 65535)
     @Column(name = "equipmentManagerAddress")
     private String equipmentManagerAddress;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipmentmanagerID")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "equipmentmanager")
     private List<Equpmanage> equpmanageList;
     @JoinColumn(name = "organisationID", referencedColumnName = "organisationID")
     @ManyToOne(optional = false)
-    private Organisation organisationID;
+    private Organisation organisation;
 
     public Equipmentmanager() {
     }
@@ -137,13 +137,15 @@ public class Equipmentmanager implements Serializable {
         this.equpmanageList = equpmanageList;
     }
 
-    public Organisation getOrganisationID() {
-        return organisationID;
+    public Organisation getOrganisation() {
+        return organisation;
     }
 
-    public void setOrganisationID(Organisation organisationID) {
-        this.organisationID = organisationID;
+    public void setOrganisation(Organisation organisation) {
+        this.organisation = organisation;
     }
+
+  
 
     @Override
     public int hashCode() {
